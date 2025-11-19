@@ -1,0 +1,51 @@
+/* 🎮 تنظیمات کلی صفحه */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#gameContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🌆 پس‌زمینه بازی */
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* 🐱 گربه */
+#hero {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    z-index: 5;
+}
+
+/* 🍝 لازانیا (food) — سایز جدید 90px */
+.food {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    z-index: 5;
+}
+
+/* ⚠️ تله‌ها */
+.trap {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
+}
