@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+    display: flex;
+    justify-content: center;
+}
+
+#game {
+    width: 390px;
+    height: 700px;
+    position: relative;
+    background: url("background.jpg") no-repeat center/cover;
+    overflow: hidden;
+    border: 3px solid white;
+}
+
+#hero {
+    width: 80px;
+    position: absolute;
+    bottom: 30px;
+    left: 155px;
+    transition: left 0.05s linear;
+}
+
+.item {
+    width: 60px;
+    position: absolute;
+    top: -80px;
+}
+
+#score, #lives {
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+#score { left: 10px; }
+#lives { right: 10px; }
+
+#game-over {
+    display: none;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+}
