@@ -1,0 +1,81 @@
+/* تنظیمات کلی صفحه */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* کانتینر بازی */
+#game {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: url("background.jpg") no-repeat center center;
+    background-size: cover; 
+    overflow: hidden;
+}
+
+/* گربه (قهرمان) */
+#hero {
+    width: 150px;   /* کوچک‌تر شد */
+    height: 150px;  /* کوچک‌تر شد */
+    position: absolute;
+    bottom: 150px;
+    left: calc(50% - 75px);
+    background-image: url("cat.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+/* آیتم‌ها (غذا و تله) */
+.item {
+    width: 100px;   /* کوچک‌تر شد */
+    height: 100px;  /* کوچک‌تر شد */
+    position: absolute;
+    left: 50%;              
+    transform: translateX(-50%);
+    z-index: 5;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* نوع آیتم‌ها */
+.item[data-type="food"] {
+    background-image: url("food.png");
+}
+
+.item[data-type="trap"] {
+    background-image: url("trap.png");
+}
+
+/* نمایش امتیاز و جان‌ها */
+#score, #lives {
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+#score { left: 10px; }
+#lives { right: 10px; }
+
+/* پیام Game Over */
+#game-over {
+    display: none;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 20;
+}
